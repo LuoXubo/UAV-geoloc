@@ -24,27 +24,26 @@ pip install -r requirements.txt
 2. Arrange the dataset as follows:
 
 ```
-UAV-benchmark-M/
-├── test/
-│   ├── image/
-│   ├── label/
-├── train/
-│   ├── image/
-│   ├── label/
-```
-
-3. Generate the training set and testing set list files
-
-```sh
-python generate_list.py
+UAV-geoloc
+├── datasets
+│   ├── query
+│   │   ├── 1
+│   │   │   ├── 000001.jpg
+│   │   │   ├── ...
+│   ├── database
+│   │   ├── 1
+│   │   │   ├── 000001.jpg
+│   │   │   ├── ...
 ```
 
 ### Testing
 
-Test the model with the following command:
+Test the model with the following commands:
+
+1. Coarse localization
 
 ```sh
-python test.py --config config/config.yaml
+python test.py --config configs/test_coarse.yaml
 ```
 
 ## Citation
