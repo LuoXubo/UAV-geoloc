@@ -15,7 +15,8 @@ git clone https://github.com/LuoXubo/UAV-geoloc
 2. Install requirements
 
 ```sh
-pip install -r requirements.txt
+conda env create -f environment.yml
+conda activate uavgeoloc
 ```
 
 ### Data Preparation
@@ -43,7 +44,22 @@ Test the model with the following commands:
 1. Coarse localization
 
 ```sh
-python test.py --config configs/test_coarse.yaml
+cd Coarse
+
+python3 test.py \
+--name='final_three_view_long_share_d0.75_256_s1_google_LPN4_lr0.001' \
+--batchsize=128 \
+--gpu_ids='0'
+
+python demo_all.py
+```
+
+2.
+
+```sh
+cd Refine
+
+python dfm_selected_top1.py
 ```
 
 ## Citation
