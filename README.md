@@ -82,4 +82,4 @@ If you find this work useful, please consider citing the following paper:
 
 ## Acknowledgements
 
-This repo is built upon the [LPN](https://github.com/wtyhub/LPN) and DFM(https://github.com/ufukefe/DFM). We thank the authors for sharing their code.
+This repo is built upon the [LPN](https://github.com/wtyhub/LPN) and [DFM](https://github.com/ufukefe/DFM). We thank the authors for sharing their code.
